@@ -1,0 +1,1 @@
+export type ObjectManagerItemType = "String" | "Number" | "Boolean" | "Object" | "Array" | "Null" | "Undefined" | "Uint8Array"
