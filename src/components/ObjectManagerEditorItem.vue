@@ -21,7 +21,7 @@
                 </div>
             </div>
         </template>
-        <el-input v-if="currItem.type === 'String'" :model-value="currItem.value" :rows="2" type="textarea"
+        <el-input v-if="currItem.type === 'String'" v-model:model-value="currItem.value" :rows="2" type="textarea"
             placeholder="Empty"></el-input>
         <input-number v-if="currItem.type === 'Number'" v-model:number="currItem.value"></input-number>
         <div v-if="currItem.type === 'Boolean'" class="flex items-center gap-2">

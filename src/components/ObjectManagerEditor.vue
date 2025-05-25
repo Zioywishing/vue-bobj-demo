@@ -44,7 +44,10 @@ const handleDeserializerBobj = async () => {
     if (!file) return
     const bobjData = await file.arrayBuffer()
     const obj = await bobjDeserializer.deserialize(new Uint8Array(bobjData))
-    currentObjectManager.value = new ObjectManager(obj)
+    currentObjectManager.value!.objManagerItemArray = [...(new ObjectManager(obj)).objManagerItemArray]
+    currentObjectManager.value!.objManagerItemArray.forEach(item => {
+        item.parent = currentObjectManager.value!
+    })
 }
 
 </script>

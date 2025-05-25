@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { reactive } from 'vue';
 import ObjectManager from './class/ObjectManager';
 
-const rootObjectManager = ref(new ObjectManager({
+const rootObjectManager = reactive(new ObjectManager({
   "name": "MiaoSpring",
 }));
 </script>
