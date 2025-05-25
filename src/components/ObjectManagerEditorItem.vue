@@ -1,8 +1,8 @@
 <template>
-    <el-card class="w-full">
+    <el-card class="w-full min-w-2xs">
         <template #header>
-            <div class="flex justify-between items-center">
-                <div class="flex gap-5">
+            <div class="flex justify-between items-center gap-2">
+                <div class="flex gap-2 flex-wrap">
                     <div class="flex items-center">
                         <el-input class="ml-2" v-model="props.currItem.key"
                             :disabled="isArrItem">
@@ -10,7 +10,7 @@
                         </el-input>
                     </div>
                     <div class="flex items-center">
-                        Type
+                        <!-- Type -->
                         <el-select class="ml-2" v-model="currItem.type" placeholder="Undefined" style="width: 8rem;">
                             <el-option v-for="item in ObjManagerItemTypesArr" :key="item" :label="item" :value="item" />
                         </el-select>

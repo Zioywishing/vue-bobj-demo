@@ -5,8 +5,8 @@
                 :curr-item="item"></object-manager-editor-item>
         </div>
         <template #footer>
-            <div class="flex justify-between items-center">
-                <div class="flex gap-2">
+            <!-- <div class="flex justify-center items-center"> -->
+                <div class="flex gap-2 flex-wrap justify-center">
                     <el-button type="primary" @click="currentObjectManager!.addItem({
                         key: 'newKey',
                         type: 'Undefined',
@@ -15,7 +15,7 @@
                     <el-button v-if="!isArrItem" type="primary" @click="handleDownloadBobj">To Bobj</el-button>
                     <el-button v-if="!isArrItem" type="primary" @click="handleDeserializerBobj">From Bobj</el-button>
                 </div>
-            </div>
+            <!-- </div> -->
         </template>
     </el-card>
 </template>
